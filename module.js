@@ -29,3 +29,18 @@ export {
 }
 
 //  as 重命名 v1 & v2
+
+export var m = 1
+
+var m = 1
+export {m}
+
+var n = 1
+export {n as m}
+
+export function f() {}
+
+function f() {}
+export {f}
+
+//  以上几种情况是可以的，其余错误。
