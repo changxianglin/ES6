@@ -60,3 +60,7 @@ import{firstName, lastName, year} from './profile'
 function setName(element) {
   element.textContent = firstName + '' + lastName
 }
+
+import {lastName as surname} from './profile'
+
+import {myMethod} from 'util'
