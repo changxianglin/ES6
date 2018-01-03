@@ -44,3 +44,9 @@ function f() {}
 export {f}
 
 //  以上几种情况是可以的，其余错误。
+
+
+export var foo = 'bar'
+setTimeout(() => foo = 'baz', 500)
+
+// es6 箭头函数  输出变量 foo ， 值为 bar ， 500 秒后变成 baz.
