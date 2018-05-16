@@ -59,5 +59,28 @@ const main = () => {
   // 量词
   // 预定义模式
   // i 修饰符
-  // 
+  // y 修饰符 (粘连修饰符)
+  // sticky 属性
+  // flags 属性
+  // s 修饰符：dotAll模式 ()
+  // 后行断言
+  // Unicode 属性类
+
+  // 数值扩展
+  // 二进制和八进制
+  // Number.isFinite(), Number.isNaN()
+  // Number.parseInt(), Number.parseFloat()
+  // Number.isInterger()
+  // Number.EPSILON
+  // 安全整数和 Number.isSafeInteger()
+
+  // Math 对象的扩展
+  // Math.truns() (用于去除一个数的小数部分，返回整数部分，无法截取返回NaN)
+  // Math.sign() (用来判断一个数到底是正数、负数、还是零。对于非数值，会先将其转换为数值。)
+  // Math.cbrt() (用于计算一个数的立方根)
+  // Math.clz32()
+  // Math.imul()
+  // Math.expm1()
+  // Math.log1p()
+  // 指数运算符
 }
