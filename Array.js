@@ -83,4 +83,40 @@ const main = () => {
   // Math.expm1()
   // Math.log1p()
   // 指数运算符
+
+  // 函数的扩展
+
+  // 函数的参数默认值
+  // ES6 之前， 不能直接设置参数的默认值，只能采用变通的方法
+  //  function log(x, y) {
+  //    y = y || 'World'
+  //    console.log(x, y)
+  // }
+  // 缺点在于先判断一个参数 y 被赋值
+  // if(typeof y === 'undefined') { y = 'World'}
+  // ES6 允许为函数的参数设置默认值， 即直接写在参数定义的后面
+  // function log(x, y = 'World') {
+  // console.log(x, y)
+  // }
+  // 参数变量是默认声明的，所以不能用 let 或 const 再次声明(会报错)
+  // 参数使用默认值时，函数不能有同名参数
+  // 默认参数惰性求值, 每次都会重新计算默认的值
+  // 与解构赋值默认值结合使用
+  //  function foo({x, y = 5} = {}) {
+  //  console.log(x, y)
+  // }
+  //  function fetch(url, {body = '', method = 'GET', headers = {}} = {}) {
+  //  console.log(method)
+  // }
+  // 参数默认值的位置
+  // 通常情况下，定义了默认值的参数， 应该是函数的尾参数，因为这样比较容易看出来，
+  // 到底省略了哪些参数,如果非尾部的参数设置默认值， 实际上这个参数没法省略的。
+  // 函数的 length 属性
+  // rest 参数
+  // 严格模式
+  // name 属性
+  // 箭头函数
+  // 双冒号运算
+  // 尾调优化
+  // 函数参数的尾逗号
 }
