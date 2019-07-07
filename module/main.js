@@ -15,4 +15,4 @@ import { foo } from 'my_module'
 export { es6 as default } from './someModule'
 // 等同于
 import { es6 } form './someModule'
-export default es6
+export default es
