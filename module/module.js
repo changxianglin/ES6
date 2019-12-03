@@ -42,3 +42,8 @@ function makeStyleGuide() {
 export default makeStyleGuide
 
 // Object export default name firstLetter should uppercase
+const StyleGuide = {
+  es6: {
+    
+  }
+}
