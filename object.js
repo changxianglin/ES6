@@ -60,3 +60,30 @@ module.exports = {
   setItem: setItem,
   clear: clear,
 }
+
+var cart = {
+  _wheels: 4,
+  get wheels() {
+    return this._wheels;
+  },
+  set wheels() {
+    if(value < this._wheels) {
+      throw new Error('数值太小了！')
+    }
+    this._wheels = value
+  }
+}
+
+var obj = {
+  class() {}
+} //等同于
+
+var obj = {
+  'class': function() {}
+}
+
+var obj = {
+  * m() {
+    yield 'hello world'
+  }
+}
