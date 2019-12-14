@@ -87,3 +87,49 @@ var obj = {
     yield 'hello world'
   }
 }
+
+// 属性名表达式
+obj.foo = true
+obj['a' + 'bc'] = 123
+
+// 字面量 es5
+var obj = {
+  foo: true,
+  abc: 123
+}
+
+// 字面量 es6
+let propKey = 'foo'
+var obj = {
+  [propKey]: true,
+  ['a' + 'bc']: 123
+}
+
+// 另外一个例子
+var lastWrod = 'last word'
+var a = {
+  'first word': 'hello',
+  [lastWord]: 'world'
+}
+
+a['first world'] // 'hello'
+a[lastWrod] // 'world'
+a['last word'] // world
+
+//
+let obj = {
+  ['h' + 'ello']() {
+    return 'hi'
+  }
+}
+
+obj.hello() // hi
+
+// 下列例子报错
+var foo = 'bar'
+var bar = 'abc'
+var baz = {[foo]}
+
+// 下列例子正确
+var foo = 'bar'
+var baz = {[foo]: 'abc'}
