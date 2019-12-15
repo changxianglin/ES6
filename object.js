@@ -161,5 +161,29 @@ let obj = {
   [key1](){},
   [key2](){},
 }
-obj[key1].name
-obj[key2].name
+obj[key1].name // '[description]'
+obj[key2].name // ""
+
+// Object.is()
+
+Object.is('foo', 'foo') // true
+Object.is({}, {}) // false
++0 === -0 // true
+NaN === NaN // false
+
+Object.is(+0, -0) // false
+Object.is(NaN, NaN) // true
+
+// es5
+Object.defineProperty(Object, 'is', {
+  value: function(x, y) {
+    if (x === y) {
+      return x !== 0 || 1 / x === 1 / y
+    }
+    //针对 NaN 的情况
+    return x !== x && y !== y
+  }
+  configurable: true,
+  enumerable: false,
+  writable: true
+})
