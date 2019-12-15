@@ -133,3 +133,33 @@ var baz = {[foo]}
 // 下列例子正确
 var foo = 'bar'
 var baz = {[foo]: 'abc'}
+
+var person = {
+  sayName: function() {
+    console.log(this.name)
+  },
+  get firstName() {
+    return 'Nicholas'
+  }
+}
+
+person.sayName.name // sayName
+person.firstName.name // get firstName
+
+(new Function()).name // anonymous
+
+var doSomething = function() {
+
+}
+
+doSomething.bind().name // 'bound doSomething'
+
+const key1 = Symbol('description')
+const key2 = Symbol()
+
+let obj = {
+  [key1](){},
+  [key2](){},
+}
+obj[key1].name
+obj[key2].name
