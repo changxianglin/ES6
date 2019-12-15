@@ -187,3 +187,29 @@ Object.defineProperty(Object, 'is', {
   enumerable: false,
   writable: true
 })
+
+// Object.assign()
+var target = {a:1}
+var source1 = {b:2}
+var source2 = {c:3}
+
+Object.assign(target, source1, source2)
+target // {a:1,b:2,c:3}
+
+var target = {a:1, b:1}
+
+var source1 = {b:2, c:2}
+var cource2 = {c:3}
+
+Object.assign(target, source1, source2)
+target // {a:1,b:2,c:3}
+
+Object.assign({b:'c'}, Object.defineProperty({}, 'invisible'， {
+  enumerable: false,
+  value: 'hello'
+})
+)
+// { b: 'c'}
+
+Object.assign({a: 'b'}, {[Symbol('c')]: 'd'})
+// {a: 'b', Symbol(c): 'd'}
