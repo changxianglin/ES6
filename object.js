@@ -213,3 +213,37 @@ Object.assign({b:'c'}, Object.defineProperty({}, 'invisible'， {
 
 Object.assign({a: 'b'}, {[Symbol('c')]: 'd'})
 // {a: 'b', Symbol(c): 'd'}
+
+var target = {a: {b: 'c', d: 'e'}}
+var source = {a: {b:'hello'}}
+Object.assign(target, source) // {a: {b: 'hello'}}
+
+
+Object.assign([1, 2, 3], [4, 5]) // [4, 5, 3]
+
+class Point {
+  constructor(x, y) {
+    Object.assign(this, {x, y})
+  }
+}
+
+Object.assign(SomeCalss.prototype, {
+  someMethod(arg1, arg2) {
+    ...
+  }
+  anotherMethod() {
+    ...
+  }
+})
+// 等同于
+SomeClass.prototype.someMethod = function(arg1, arg2) {
+  ...
+}
+SomeCalss.prototype.anotherMethod = function() {
+  ...
+}
+
+// 克隆对象
+function clone(origin) {
+  return Object.assign({}, origin)
+}
