@@ -247,3 +247,25 @@ SomeCalss.prototype.anotherMethod = function() {
 function clone(origin) {
   return Object.assign({}, origin)
 }
+
+// 保持继承链
+function clon(origin) {
+  let originProto = Object.getPrototypeOf(origin)
+  return Object.assign(Object.create(originProto), origin)
+}
+
+// 合并多个对象
+const merge = (target, ...sources) => Object.assign(target, ...sources)
+
+// 合并空对象
+const merge = (...sources) => Object.assign({}, ...sources)
+
+// 指定默认值
+const DEFAULTS = {
+  logLevel: 0,
+  outputFormat: 'html'
+}
+
+function processContent(options) {
+  let options = Object.assign({}, DEFAULTS, options)
+}
