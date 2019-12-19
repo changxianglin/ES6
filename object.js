@@ -269,3 +269,28 @@ const DEFAULTS = {
 function processContent(options) {
   let options = Object.assign({}, DEFAULTS, options)
 }
+
+// 属性的可枚举性
+Object.getOwnPropertyDescriptor
+let obj = {foo:123}
+Object.getOwnPropertyDescriptor(obj, 'foo')
+// {
+//   value: 123,
+//   wirtable: true,
+//   enumerable: true,
+//   configurable: true
+// }
+
+for...in
+Object.keys()
+JSON.stringify()
+Object.assign()
+Reflect.enumerate()
+
+Object.getOwnPropertyDescriptor(Object.prototype, 'otString').enumerable
+// false
+Object.getOwnPropertyDescriptor([], 'length').enumerable
+// false
+
+Object.getOwnPropertyDescriptor(class {foo(){}}.prototype, 'foo').enumerable
+// false
