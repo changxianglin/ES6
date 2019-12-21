@@ -294,3 +294,29 @@ Object.getOwnPropertyDescriptor([], 'length').enumerable
 
 Object.getOwnPropertyDescriptor(class {foo(){}}.prototype, 'foo').enumerable
 // false
+
+
+// 属性的遍历
+for...in
+Object.keys(obj)
+Object.getOwnPropetyNames(obj)
+Object.getOwnPropetyNames()
+Object.getOwnPropertySymbols(obj)
+Reflect.ownKeys(obj)
+Reflect.enumertate(obj)
+
+// __proto__属性
+Object.setPrototypeOf()
+Object.getPrototypeOf()
+
+__proto__ 属性
+
+// es6
+var obj = {
+  methods: function() {...}
+}
+obj.__proto__ = someOtherObj
+
+// es5
+var obj = Object.create(someOtherObj)
+obj.method = function(){...}
