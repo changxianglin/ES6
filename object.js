@@ -320,3 +320,5 @@ obj.__proto__ = someOtherObj
 // es5
 var obj = Object.create(someOtherObj)
 obj.method = function(){...}
+// es5
+//  new line
