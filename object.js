@@ -322,3 +322,29 @@ var obj = Object.create(someOtherObj)
 obj.method = function(){...}
 // es5
 //  new line
+
+Object.setPrototypeOf(object, prototype)
+
+var o = Object.setPrototypeOf({}, null)
+
+function(obj, proto) {
+  Obj.__proto__ = proto
+  return obj
+}
+
+let proto = {}
+let obj = { x: 10 }
+Object.setPrototypeOf(obj, protot)
+
+proto.y = 20
+proto.z = 40
+obj.x // 10
+obj.y // 20
+obj.z // 40
+
+Object.getPrototypeOf(obj)
+function Reactangle() {
+
+}
+
+var rec = new Reactangle()
