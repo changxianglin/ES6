@@ -348,3 +348,43 @@ function Reactangle() {
 }
 
 var rec = new Reactangle()
+
+// ...
+let { x, y, ...z} = {x: 1, y: 2, a: 3, b:4}
+x // 1
+y // 2
+z // {a: 3, b: 4}
+
+let obj = {a: {b: 1}}
+let {...x} = obj
+obj.a.b = 2
+x.a.b // 2
+
+// let o1 = {a: 1}
+let o2 = {b : 2}
+o2.__proto__ = o1
+let o3 = {...o2}
+o3 // {b: 2}
+
+let z = {a: 3, b: 4}
+let n = {...z}
+n // {a: 3, b: 4}
+
+// equal Object.assign
+let aClone = {...a}
+
+let aClone = Object.assign({}, a)
+
+let ab = {...a, ...b}
+
+let aWithOverrides = {...a, x: 1, y: 2}
+
+let aWithOverrides = {...a, ...{x: 1, y: 2}}
+
+let x = 1, y = 2, aWitchOverrides = {...a, x, y}
+
+let aWitchOverrides = Object.assign({}, a, {x: 1, y: 2})
+
+let aWithDefault = {x: 1, y: 2, ...a}
+let aWitchDefault = Objct.assign({}, {x: 1, y: 2}, a)
+let aWithDefult = Object.assign({x: 1, y: 2}, a)
